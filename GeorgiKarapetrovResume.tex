@@ -1,0 +1,341 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.4, 12 Apr 2021) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+%  \setmainfont{Roboto Slab}
+%  \setmainfont{Rubik}
+  \setmainfont{Raleway}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+%  \usepackage[rm]{rubik}
+  \usepackage[rm]{roboto}
+%  \usepackage[rm]{raleway}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{Blue}{HTML}{3090C7}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\definecolor{Purple}{HTML}{B043D1}
+\colorlet{name}{black}
+\colorlet{tagline}{Blue}
+\colorlet{heading}{Blue}
+\colorlet{headingrule}{black}
+\colorlet{subheading}{Blue}
+\colorlet{accent}{Blue}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% Use (and optionally edit if necessary) this .cfg if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+\input{pubs-authoryear.cfg}
+
+%% Use (and optionally edit if necessary) this .cfg if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+% \input{pubs-num.cfg}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Georgi Karapetrov}
+\tagline{Technology Consultant \phone{+359877207204}}
+%\phone{+359877207204}
+%% You can add multiple photos on the left or right
+% \photoR{2.8cm}{me}
+% \photoL{2.5cm}{me}
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{karapetrov.georgi@mail.bg}
+  \github{GeorgiKarapetrov}
+  %\phone{+359877207204}
+  % \mailaddress{Åddrésş, Street, 00000 Cóuntry}
+  %\location{Location, COUNTRY}
+  \homepage{georgi.karapetrov.top}
+  %\twitter{@twitterhandle}
+  \\
+  \email{georgi@karapetrov.top}
+  \hspace{11pt}
+  \linkedin{GeorgiKarapetrov}
+  \homepage{linktr.ee/Georgi.DevOps}
+  
+  %\homepage{keybase.io/georgi_devops}
+  %\orcid{0000-0000-0000-0000}
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+
+\cvsection{SKILLS}
+
+\cvevent{}{Skill Set:}{}{}
+\cvtag{Python/Jython}
+\cvtag{Java}
+\cvtag{ITIL}
+\cvtag{JS}
+\cvtag{VBA}
+\cvtag{Linux}
+\cvtag{Bash}\\
+\cvtag{Docker}
+\cvtag{Kubernetes}
+\cvtag{WSDL/XSD/XML}
+\cvtag{SQL}
+\cvtag{Git}\\
+\cvtag{NginX}
+\cvtag{Apache}
+\cvtag{LaTeX}
+\cvtag{Mathematica}
+\cvtag{MikroTik}\\
+\cvtag{Cisco}
+\cvtag{Micro Focus Service Manager}
+\cvtag{Micro Focus uCMDB}
+
+\divider
+
+\cvevent{}{Happy to Pick-up:}{}{}
+\cvtag{Terraform}
+\cvtag{Ansible}
+\cvtag{Puppet}
+\cvtag{Chef}
+\cvtag{VMWare}
+\cvtag{Zen/Citrix}\\
+\cvtag{Another Language or Framework}
+
+\divider
+
+\cvevent{}{Soft Skills:}{}{}
+\cvtag{Disciplined}
+\cvtag{Conscientious}
+\cvtag{Easy-Going}
+\cvtag{Fast Learner}
+
+\cvsection{ACHIEVEMENTS}
+
+\cvachievement{\faGem}{Ticket Exchange}{Designing and implementing ticket exchange between multiple parties, for a Micro Focus customer.}
+
+\divider
+
+\cvachievement{\faLightbulb}{Efficiency Report}{A report for the ETA telecom, analyzing the efficiency of the company workflow and suggesting structural improvements.}
+
+\divider
+
+\cvachievement{\faChartLine}{Customer Service}{Obsessed with customer satisfaction and product quality, achieved highest standards service in my contact center jobs, processing 60+ calls daily.}
+
+\divider
+
+\cvachievement{\faAtom}{Master Thesis}{In a joint work with the KUL physics department.}
+
+\bigskip
+\bigskip
+\smallskip
+\vspace{1pt}
+
+\cvsection{Passions}
+
+{\Large\color{accent}\faSwimmer} \bfseries\textcolor{emphasis}{Swimming}
+\hspace{80pt}
+{\Large\color{accent}\faMicrophone} \bfseries\textcolor{emphasis}{Singing}
+\\
+% \vspace{5pt}
+% {\Large\color{accent}\faHeartbeat} \bfseries\textcolor{emphasis}{Another}
+% \hspace{20pt}
+% {\Large\color{accent}\faHeartbeat} \bfseries\textcolor{emphasis}{Another}
+% \hspace{20pt}
+% {\Large\color{accent}\faHeartbeat} \bfseries\textcolor{emphasis}{Another}
+
+
+
+% \cvsection{Projects}
+
+% \cvevent{Project 1}{Funding agency/institution}{}{}
+% \begin{itemize}
+% \item Details
+% \end{itemize}
+
+% \divider
+
+% \cvevent{Project 2}{Funding agency/institution}{Project duration}{}
+% A short abstract would also work.
+
+% \medskip
+
+% \cvsection{A Day of My Life}
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+% \wheelchart{1.5cm}{0.5cm}{%
+%   6/8em/accent!30/{Sleep,\\beautiful sleep},
+%   3/8em/accent!40/Hopeful novelist by night,
+%   8/8em/accent!60/Daytime job,
+%   2/10em/accent/Sports and relaxation,
+%   5/6em/accent!20/Spending time with family
+% }
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the current column
+\newpage
+
+% \cvsection{Publications}
+
+% \nocite{*}
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+% \cvsection{My Life Philosophy}
+
+% \begin{quote}
+% ``Something smart or heartfelt, preferably in one sentence.''
+% \end{quote}
+
+
+\cvsection{Experience}
+
+\cvevent{DevOps Engineer}{Sciant}{Oct 2021 - Ongoing}{}
+\divider
+\cvevent{Technology Consultant II}{Micro Focus}{Oct 2019 - Oct 2021}{}
+
+\divider
+
+\cvevent{Network Administrator}{Eta Zheleva Ltd}{May 2019 - Aug 2019}{}
+\begin{itemize}
+\item The major telecom for Lovech and Pleven
+\end{itemize}
+
+\divider
+
+% \cvevent{Specialist in Processing Information}{Bulpros}{2017}{}
+% \begin{itemize}
+% \item Subcontractor for Concentrix
+% \end{itemize}
+
+\vspace{7pt}
+
+\cvsection{Education}
+
+\cvevent{Certificate in Python}{Progress Bulgaria}{2019}{}
+
+\divider
+
+\cvevent{M.S. in Mathematics}{University of Leuven}{2014 -- 2016}{}
+Thesis title: On Sasaki-Einstein and Other Spinor Manifolds
+
+\divider
+
+\cvevent{B.S. in Mathematics}{Sofia University "St. Kliment Ohridski"}{2011 -- 2014}{}
+
+
+
+
+\cvsection{Languages}
+
+\cvskill{Bulgarian}{5}
+\divider
+
+\cvskill{English}{4}
+\divider
+
+\cvskill{Russian}{1}
+
+%% Yeah I didn't spend too much time making all the
+%% spacing consistent... sorry. Use \smallskip, \medskip,
+%% \bigskip, \vspace etc to make adjustments.
+\medskip
+
+
+% \divider
+
+% \cvsection{Referees}
+
+% \cvref{name}{email}{mailing address}
+% \cvref{Prof.\ Alpha Beta}{Institute}{a.beta@university.edu}
+% {Address Line 1\\Address line 2}
+
+% \divider
+
+% \cvref{Prof.\ Gamma Delta}{Institute}{g.delta@university.edu}
+% {Address Line 1\\Address line 2}
+
+
+\end{paracol}
+
+
+\end{document}
