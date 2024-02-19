@@ -1,0 +1,252 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.4, 12 Apr 2021) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+%  \setmainfont{Roboto Slab}
+%  \setmainfont{Rubik}
+  \setmainfont{Raleway}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+%  \usepackage[rm]{rubik}
+  \usepackage[rm]{roboto}
+%  \usepackage[rm]{raleway}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{Blue}{HTML}{3090C7}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\definecolor{Purple}{HTML}{B043D1}
+\colorlet{name}{black}
+\colorlet{tagline}{Blue}
+\colorlet{heading}{Blue}
+\colorlet{headingrule}{black}
+\colorlet{subheading}{Blue}
+\colorlet{accent}{Blue}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+
+\begin{document}
+\name{Georgi Karapetrov}
+\tagline{Technology Consultant \phone{+359877207204}}
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{Georgi.D.Karapetrov@gmail.com}
+  \github{GeorgiKarapetrov}
+  \homepage{georgi.karapetrov.top}
+  \\
+  \email{Georgi@Karapetrov.top}
+  \hspace{29pt}
+  \linkedin{GeorgiKarapetrov}
+  \homepage{linktr.ee/Georgi.DevOps}
+  
+}
+
+\makecvheader
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+
+\cvsection{Experience}
+
+\cvevent{Software Engineer}{VMWare}{Jan 2023 - Feb 2024}{}
+\begin{itemize}
+\item Drove the VMWare DBaaS to General Availability
+\item Drove the Data Service Manage 2.0 release to completion
+\item Designed and developed features
+\item Code review
+\item Developed platform and SRE tools
+\item Built and maintained virtual infrastructure
+\item Set up CI/CD automation workflows
+\item SRE Duties
+\item Customer Support
+\end{itemize}
+\divider
+
+\cvevent{DevOps Engineer}{Sciant}{Oct 2021 - Dec 2022}{}
+\begin{itemize}
+\item Implement integration solutions according to the project requirements
+\item Install, configure and automate system and application software
+\item Develop and use process automation scripts and tools
+\item Engage in software performance analysis and system tuning
+\item Analyze and enhance availability, security, and scalability of the software products
+\item Create and configure cloud-based environments and services
+\item Set up CI/CD automation workflows
+\item Solve critical problems in development or production environments
+\item System, network and application administration support
+\item Customer Support
+\end{itemize}
+\divider
+
+\cvevent{Technology Consultant II}{Micro Focus}{Oct 2019 - Oct 2021}{}
+\begin{itemize}
+\item Administer Micro Focus IT Operation Managment products in accordance with highest ITIL standards
+\item Specialized in Universal Configuration Management Databese integrations
+\item Designed a ticket exchange mechanism and developed the design in IT Service Manager (JavaScript)
+\item Customer Support
+\end{itemize}
+
+\newpage
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+
+\cvsection{Education}
+
+\cvevent{Certificate in Python}{Progress Bulgaria}{2019}{}
+\divider
+
+\cvevent{M.S. in Mathematics}{University of Leuven}{2014 -- 2016}{}
+\begin{itemize}
+\item Thesis On Sasaki-Einstein and Other Spinor Manifolds
+\end{itemize}
+\divider
+
+\cvevent{B.S. in Mathematics}{Sofia University "St. Kliment Ohridski"}{2011 -- 2014}{}
+
+\vspace{35pt}
+
+
+\cvsection{ACHIEVEMENTS}
+
+\cvachievement{\faChartLine}{Database Management}{Drove VMWare's own Database Management Service to
+
+general availability and DataServiceManager's v2 release.}
+\divider
+
+\cvachievement{\faGem}{Ticket Exchange}{Single-handedly designed, negotiated, developed and
+
+implemented a ticket exchange between multiple parties,
+
+for a Micro Focus customer.}
+\divider
+
+\cvachievement{\faLightbulb}{Efficiency Report}{Wrote  report for the ETA telecom, analyzing the efficiency of the company work-flow, suggesting structural improvements.}
+\divider
+
+\cvachievement{\faAtom}{Master Thesis}{In a joint work with the KUL physics department.}
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the current column
+\newpage
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+
+\cvsection{SKILLS}
+
+\cvevent{}{Toolbox:}{}{}
+\cvtag{GoLang}
+\cvtag{Python}
+%\cvtag{Docker}
+\cvtag{Kubernetes}
+%\cvtag{Portainer}
+%\cvtag{Terraform}
+
+\cvtag{Linux/Bash}
+\cvtag{IaC}
+\cvtag{CloudOps}
+
+\cvtag{GitOps}
+\cvtag{CI/CD}
+\cvtag{SQL}
+\cvtag{ITIL}
+\divider
+
+\cvevent{}{Happy to Pick-up:}{}{}
+\cvtag{ML}
+\cvtag{Quant Science}
+
+\cvtag{GCP}
+\cvtag{Hashicorp stack}
+
+\cvtag{ProxMox}
+\cvtag{Ansible}
+\cvtag{Packer}
+\divider
+
+\cvevent{}{Soft Skills:}{}{}
+\cvtag{Disciplined}
+\cvtag{Conscientious}
+
+\cvtag{Easy-Going}
+\cvtag{Fast Learner}
+
+
+\cvsection{Languages}
+\cvskill{Bulgarian}{5}
+\divider
+\cvskill{English}{4}
+\divider
+\cvskill{Russian}{1}
+
+
+\cvsection{Passions}
+{\Large\color{accent}\faSwimmer} \bfseries\textcolor{emphasis}{Swimming}
+\hspace{60pt}
+{\Large\color{accent}\faMicrophone} \bfseries\textcolor{emphasis}{Singing}
+\\
+
+%% Yeah I didn't spend too much time making all the
+%% spacing consistent... sorry. Use \smallskip, \medskip,
+%% \bigskip, \vspace etc to make adjustments.
+\medskip
+
+
+\end{paracol}
+
+
+\end{document}
