@@ -1,0 +1,147 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.4, 12 Apr 2021) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+%  \setmainfont{Roboto Slab}
+%  \setmainfont{Rubik}
+  \setmainfont{Raleway}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+%  \usepackage[rm]{rubik}
+  \usepackage[rm]{roboto}
+%  \usepackage[rm]{raleway}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{Blue}{HTML}{3090C7}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\definecolor{Purple}{HTML}{B043D1}
+\colorlet{name}{black}
+\colorlet{tagline}{Blue}
+\colorlet{heading}{Blue}
+\colorlet{headingrule}{black}
+\colorlet{subheading}{Blue}
+\colorlet{accent}{Blue}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+
+\begin{document}
+\name{Georgi Karapetrov}
+\tagline{M.Sc. in Mathematics \phone{+359877207204}}
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{Georgi.D.Karapetrov@gmail.com}
+  \github{GeorgiKarapetrov}
+  \homepage{georgi.karapetrov.top}
+  \\
+  \email{Georgi@Karapetrov.top}
+  \hspace{29pt}
+  \linkedin{GeorgiKarapetrov}
+  \homepage{linktr.ee/Georgi.DevOps}
+  
+}
+
+\makecvheader
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+\cvsection{Education}
+
+\cvevent{B.S. in Mathematics}{Sofia University "St. Kliment Ohridski"}{2011 -- 2014}{Sofia, Bulgaria}
+\begin{itemize}
+\item Audited a number courses extra curricular particularly, courses in the physics department.
+\end{itemize}
+
+\cvevent{M.Sc. in Mathematics}{University of Leuven}{2014 -- 2016}{Leuven, Belgium}
+\begin{itemize}
+\item Thesis On Sasaki-Einstein and Other Spinor Manifolds
+\end{itemize}
+\divider
+
+
+\bigskip
+\cvsection{Experience}
+
+\cvevent{Software Engineer}{VMWare}{Jan 2023 - Feb 2024}{Sofia, Bulgaria}
+\begin{itemize}
+\item Drove the VMWare DBaaS to General Availability
+\item Drove the Data Service Manage 2.0 release to completion
+\item Designed and developed features
+\item Code review
+\item Developed platform and SRE tools
+\item Built and maintained virtual infrastructure
+\item Set up CI/CD automation workflows
+\end{itemize}
+\divider
+
+\cvevent{DevOps Engineer}{Sciant}{Oct 2021 - Dec 2022}{Sofia, Bulgaria}
+\begin{itemize}
+\item Developed process automation scripts and tools
+\item Engaged in software performance analysis and system tuning
+\item Created and configured cloud-based environments and services
+\item Analyzed and enhanced availability, security, and scalability of cloud infrastructure
+\item Set up CI/CD automation workflows
+\item Solved critical problems in development or production environments
+\item System, network and application administration support
+\end{itemize}
+\divider
+
+\cvevent{Technology Consultant II}{Micro Focus}{Oct 2019 - Oct 2021}{Sofia, Bulgaria}
+\begin{itemize}
+\item Designed a ticket exchange mechanism and developed the design in IT Service Manager
+\end{itemize}
+
+\bigskip
+
+
+\end{document}
