@@ -73,6 +73,28 @@
 \renewcommand{\itemmarker}{{\small\textbullet}}
 \renewcommand{\ratingmarker}{\faCircle}
 
+% Fix: under the ragged2e option, in the narrow (40%) right paracol column the
+% stock \cvskill line lets the label + rating markers exceed \linewidth, so LaTeX
+% hyphenates the bold label (e.g. "En-glish", "Rus-sian") and pushes part of the
+% word off the line (only "sian" from "Russian" was visible). Redefining \cvskill
+% to lay the label and markers inside a \makebox[\linewidth] constrains the \hfill
+% to the column width: the label stays put and the markers sit flush-right within
+% the column, with no hyphenation, clipping or overflow. The original half-marker
+% \clipbox logic and AccSupp copy/paste behaviour are preserved.
+\renewcommand{\cvskill}[2]{%
+  \par\noindent\makebox[\linewidth][l]{%
+    \textcolor{emphasis}{\textbf{#1}}\hfill
+    \BeginAccSupp{method=plain,ActualText={#2}}%
+    \foreach \x in {1,...,5}{%
+      \ifdimequal{\x pt - #2 pt}{0.5pt}%
+      {\clipbox*{0pt -0.25ex {.5\width} {\totalheight}}{\color{accent}\cvRatingMarker}%
+       \clipbox*{{.5\width} -0.25ex {\width} {\totalheight}}{\color{body!30}\cvRatingMarker}}%
+      {\ifdimgreater{\x bp}{#2 bp}{\color{body!30}}{\color{accent}}\cvRatingMarker}%
+    }\EndAccSupp{}%
+  }\par%
+}
+
+
 
 \begin{document}
 \name{Georgi Karapetrov}
